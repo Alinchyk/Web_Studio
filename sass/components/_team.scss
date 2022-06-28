@@ -1,0 +1,108 @@
+.team {
+  background-color: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+  .section-title {
+    color: $text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .card-element {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin: -15px;
+    }
+
+    .box {
+      background: $white;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: calc((100% - 4 * 30px) / 4);
+      }
+
+      @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .photo {
+      border-radius: 4px 4px 0 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .icon-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px 32px 24px;
+  }
+
+  .icon-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: $white;
+    border-radius: 50%;
+    outline: none;
+    fill: $main-text-color;
+
+    &:hover,
+    &:focus {
+      fill: $white;
+      @extend %transition;
+    }
+    &:hover,
+    &:focus {
+      background: $accent-color;
+      @extend %transition;
+    }
+  }
+
+  .card-title {
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .card-text {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: $main-text-color;
+  }
+}
